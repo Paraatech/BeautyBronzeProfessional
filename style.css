@@ -1,0 +1,183 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaaeae;
+    color: #333;
+    
+    }
+    
+  @media only screen and (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  header {
+   
+    position: fixed;
+    width: 100vw;
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    gap: 3%;
+    padding: 2%;
+
+
+    
+     
+      
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    flex-direction:column;
+    text-align: center;
+ 
+      
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .video {
+    width: 100%;
+    align-content: center;
+  }
+   summary::after {
+      content: " Read More...";
+    }
+  
+  .about{
+    color:rgb(17, 13, 13);
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+  }
+  section {
+    padding: 10% 5%;
+    max-width: 1000vw;
+    margin: auto;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1%;
+  }
+  /* 3D container setup */
+.crystal {
+  position: fixed;
+  right: 20px;
+  top: 80%;
+  transform: translateY(-50%);
+  perspective: 800px;
+  z-index: 1000;
+}
+
+/* Dice styling */
+.dice {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 6s infinite linear;
+ 
+}
+@keyframes colorShift {
+  0%   { background: #e91e63; }
+  20%  { background: #9c27b0; }
+  40%  { background: #3f51b5; }
+  60%  { background: #03a9f4; }
+  80%  { background: #4caf50; }
+  100% { background: #130c01; }
+}
+
+/* Faces of the dice */
+.face {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #a618ff;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  font-weight: bold;
+ animation: colorShift 5s infinite linear;
+}
+
+/* Position each face */
+.front  { transform: rotateY(0deg) translateZ(30px); }
+.back   { transform: rotateY(180deg) translateZ(30px); }
+.right  { transform: rotateY(90deg) translateZ(30px); }
+.left   { transform: rotateY(-90deg) translateZ(30px); }
+.top    { transform: rotateX(90deg) translateZ(30px); }
+.bottom { transform: rotateX(-90deg) translateZ(30px); }
+
+/* Animation */
+@keyframes rotate {
+  from { transform: rotateX(0) rotateY(0); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+  
+  .product-card {
+    background: white;
+    border-radius: 4%;
+    padding: 2%;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card img {
+    width: 60%;
+    height: auto;
+    border-radius: 3%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #111827;
+  }
+  
+  footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  
