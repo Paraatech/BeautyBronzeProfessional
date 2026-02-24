@@ -76,38 +76,59 @@ function toggleChat() {
 function aiReply(message) {
   const msg = message.toLowerCase();
 
-  if (msg.includes("address") || msg.includes("location") || msg.includes("where")) {
-    return "📍 Our Shop Address: Beauty Bronze Salon, Near Karimpur Bus Stand, Punjab.";
-  }
-
-  if (msg.includes("number") || msg.includes("contact") || msg.includes("phone")) {
-    return "📞 Owner Contact: +91 8264603938";
-  }
-
-  if (msg.includes("available") || msg.includes("stock")) {
-    return "✔ Yes! The product is available.";
-  }
-
-  if (msg.includes("price")) {
-    return "💰 Please tell me which product price you want.";
-  }
-
+  // Greetings
   if (msg.includes("hi") || msg.includes("hello") || msg.includes("hey")) {
-    return "👋 Hello! How can I assist you today?";
+    return "👋 Hello! Welcome to Beauty Bronze. How can I help you today?";
   }
 
-  if (msg.includes("deliver") || msg.includes("shipping")) {
-    return "🚚 Yes, we deliver across Punjab!";
+  // Shop Address
+  if (msg.includes("address") || msg.includes("location") || msg.includes("where")) {
+    return "📍 Our Shop Address:\nShop No. 2, Mahadev Enterprises, Near Goyal Properties, Ludhiana, Punjab.";
   }
 
-  if (msg.includes("thank")) {
-    return "🥰 You're welcome!";
+  // Contact
+  if (msg.includes("number") || msg.includes("contact") || msg.includes("phone")) {
+    return "📞 Owner Contact: +91 8264603938\nFeel free to call anytime between 10 AM – 7 PM.";
   }
 
-  return "🙂 I can help with shop address, contact number, pricing, availability or product details.";
+  // Availability
+  if (msg.includes("available") || msg.includes("stock") || msg.includes("have")) {
+    return "✔ Yes! The product is currently in stock. Would you like to place an order?";
+  }
+
+  // Price related
+  if (msg.includes("price") || msg.includes("cost") || msg.includes("rate")) {
+    return "💰 Sure! Please tell me the product name so I can share the exact price.";
+  }
+
+  // Delivery & Shipping
+  if (msg.includes("deliver") || msg.includes("shipping") || msg.includes("courier")) {
+    return "🚚 Yes! We deliver across Punjab, Haryana, Uttar Pradesh and many more states. Fast shipping available!";
+  }
+
+  // Payment Methods
+  if (msg.includes("payment") || msg.includes("pay") || msg.includes("upi") || msg.includes("cod")) {
+    return "💳 We accept UPI, Bank Transfer & Cash on Delivery (COD) for selected locations.For order pls reach our shop or call us on 8264603938\nFeel free to call anytime between 10 AM – 7 PM ";
+  }
+
+  // Return / Refund
+  if (msg.includes("return") || msg.includes("refund") || msg.includes("replace")) {
+    return "🔄 We offer easy replacement if the product is damaged or incorrect. Just share an unboxing video.";
+  }
+
+  // Offers / Discounts
+  if (msg.includes("offer") || msg.includes("discount") || msg.includes("sale")) {
+    return "🎉 Yes! We have special offers for get that discout just follow us on instagram and get flat 15% discount on MRP";
+  }
+
+  // Thank You
+  if (msg.includes("thank") || msg.includes("thanks")) {
+    return "🥰 You're most welcome! Let me know if you need anything else.";
+  }
+
+  // Default Message (improved)
+  return "🙂 I'm here to help you with product prices, availability, offers, delivery, payment options or any shop details. Just type your question!";
 }
-
-
 
 /* ------------------------------------------
    SEND CHAT MESSAGE → BACKEND + AI REPLY
