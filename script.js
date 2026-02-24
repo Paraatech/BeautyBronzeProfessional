@@ -117,7 +117,7 @@ function aiReply(message) {
   }
 
   // Offers / Discounts
-  if (msg.includes("offer") || msg.includes("discount") || msg.includes("sale")) {
+  if (msg.includes("offer") || msg.includes("discount") || msg.includes("sale price")) {
     return "🎉 Yes! We have special offers for get that discout just follow us on instagram and get flat 15% discount on MRP";
   }
 
