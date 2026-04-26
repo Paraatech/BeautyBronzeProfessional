@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Orders</title>
+<style>
+body{
+font-family:Arial;
+background:#f4f4f4;
+padding:20px;
+}
+h1{
+text-align:center;
+}
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+th,td{
+padding:12px;
+border:1px solid #ddd;
+text-align:center;
+}
+th{
+background:#111827;
+color:white;
+}
+</style>
+</head>
+<body>
+
+<h1>Customer Orders</h1>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Phone</th>
+<th>Product</th>
+<th>Address</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody id="ordersTable"></tbody>
+</table>
+
+<script>
+fetch("https://beautybronze-backend.onrender.com/api/orders")
+.then(res=>res.json())
+.then(data=>{
+let table="";
+data.forEach(order=>{
+table += `
+<tr>
+<td>${order.name}</td>
+<td>${order.phone}</td>
+<td>${order.product}</td>
+<td>${order.address}</td>
+<td>${new Date(order.time).toLocaleString()}</td>
+</tr>
+`;
+});
+document.getElementById("ordersTable").innerHTML=table;
+});
+</script>
+
+</body>
+</html>
