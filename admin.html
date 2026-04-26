@@ -50,11 +50,6 @@ color:white;
 
 <script
   
-let pass = prompt("Enter Password");
-if(pass !== "Sham123"){
-    alert("Wrong Password");
-    window.location.href = "index.html";
-}
 
 fetch("https://beautybronze-backend.onrender.com/api/orders")
 .then(res=>res.json())
@@ -73,6 +68,13 @@ table += `
 });
 document.getElementById("ordersTable").innerHTML=table;
 });
+</script>
+  <script>
+let pass = prompt("Enter Password");
+if(pass !== "Sham123"){
+    alert("Wrong Password");
+    window.location.href = "index.html";
+}
 </script>
 
 </body>
