@@ -32,11 +32,8 @@ color:white;
 <body>
 
 <h1>Customer Orders</h1>
-  let pass = prompt("Enter Password");
-if(pass !== "Sham123"){
-  alert("Wrong Password");
-  window.location.href = "index.html";
-}
+  
+
 
 <table>
 <thead>
@@ -51,7 +48,14 @@ if(pass !== "Sham123"){
 <tbody id="ordersTable"></tbody>
 </table>
 
-<script>
+<script
+  <script>
+let pass = prompt("Enter Password");
+if(pass !== "Sham123"){
+    alert("Wrong Password");
+    window.location.href = "index.html";
+}
+</script>
 fetch("https://beautybronze-backend.onrender.com/api/orders")
 .then(res=>res.json())
 .then(data=>{
