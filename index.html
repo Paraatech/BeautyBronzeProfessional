@@ -1,284 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://paraatech.github.io/BeautyBronzeProfessional/">
-  <title>Beauty Bronze HairCare Products| Salon & Beauty Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Bronze Professional</title>
 
-  <meta name="description" content="Beauty Bronze Professional offers premium salon, beauty, skincare and makeup services.">
-  <meta name="keywords" content="Beauty Bronze, Beauty Bronze Professional, beauty salon, professional salon, makeup services">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <h1>Beauty Bronze Professional:)</h1>
-    <nav>
-      <ul>
-        <a href="#about" style="text-decoration: none; color: inherit;">
-          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="About" style="height: 20px; vertical-align: middle; margin-right: 5px;">
-          About Us
-        </a>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Beauty Bronze ✨</div>
 
-        <a href="#products" style="text-decoration: none; color: inherit;">
-          <img src="https://cdn-icons-png.flaticon.com/512/891/891419.png" alt="Products" style="height: 20px; vertical-align: middle; margin-right: 5px;">
-          Products
-        </a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <li><a href="mailto:beautybronzeprofessional@gmail.com" style="text-decoration: none; color: inherit;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" style="height: 20px; vertical-align: middle;">
-            beautybronzeprofessional@gmail.com
-          </a></li>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Glow Naturally, Shine Confidently</h1>
+            <p>Premium Haircare & Beauty Products for salon-like results at home.</p>
+            <a href="#products" class="hero-btn">Shop Now</a>
+        </div>
+    </section>
 
-        <a href="https://www.instagram.com/beautybronze27?igsh=ZjA4ZmF0Znc3MjZn" target="_blank" style="text-decoration: none; color: inherit;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="height: 20px; vertical-align: middle;">
-          beautybronze27
-        </a>
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>
+            At Beauty Bronze, we believe every strand tells a story. 
+            Our premium haircare products are designed to nourish, repair and transform your hair.
+        </p>
+    </section>
 
-        <a href="#contact" style="text-decoration: none; color: inherit;">
-          <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Contact" style="height: 20px; vertical-align: middle; margin-right: 5px;">
-          +91 8264603938
-        </a>
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+        <h2>Our Products</h2>
 
-      </ul>
-    </nav>
-  </header>
+        <div class="product-grid">
 
-  <div class="video">
-    <video autoplay muted loop>
-      <source src="" type="video/mp4">
-    </video>
+            <!-- PRODUCT CARD -->
+            <div class="product-card">
+                <img src="WhatsApp Image 2025-05-14 at 2.39.15 PM.jpeg" alt="Banana Hair Mask">
+                <h3>Banana Hair Mask</h3>
+                <p>Hydrates dry, frizzy hair while repairing damage and boosting shine.</p>
+                <button class="order-btn" onclick="openOrderForm('Banana Hair Mask')">Order Now</button>
+            </div>
 
-    <div class="crystal">
-      <div class="dice">
-        <div class="face front">15% off</div>
-        <div class="face back">15% off</div>
-        <div class="face right">15% off</div>
-        <div class="face left">15% off</div>
-        <div class="face top">15% off</div>
-        <div class="face bottom">15% off</div>
-      </div>
+            <div class="product-card">
+                <img src="WhatsApp Image 2025-05-14 at 3.18.01 PM.jpeg" alt="Botox Hair Mask">
+                <h3>Botox Hair Mask</h3>
+                <p>Deep repair, hydration, frizz control and silky smooth finish.</p>
+                <button class="order-btn" onclick="openOrderForm('Botox Hair Mask')">Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="WhatsApp Image 2025-05-14 at 3.17.49 PM.jpeg" alt="Nanoplex Hair Mask">
+                <h3>Nanoplex Hair Mask</h3>
+                <p>Intense restoration, shine enhancement and stronger hair strands.</p>
+                <button class="order-btn" onclick="openOrderForm('Nanoplex Hair Mask')">Order Now</button>
+            </div>
+
+            <div class="product-card">
+                <img src="WhatsApp Image 2025-05-14 at 3.35.54 PM.jpeg" alt="Nanoplex Treatment">
+                <h3>Nanoplex Treatment</h3>
+                <p>Advanced nano technology treatment for silky, shiny hair.</p>
+                <button class="order-btn" onclick="openOrderForm('Nanoplex Treatment')">Order Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- CHAT BUTTON -->
+    <div class="chat-btn" onclick="toggleChat()">💬 Chat</div>
+
+    <!-- CHAT WINDOW -->
+    <div id="chatWindow" class="chat-window">
+        <h3>Chat With Us</h3>
+        <div id="chatMessages" class="chat-messages"></div>
+        <input id="chatName" type="text" placeholder="Your Name">
+        <textarea id="chatMessage" placeholder="Your Message"></textarea>
+        <button onclick="sendMessage()">Send</button>
     </div>
 
-    <div class="about">
-      <h2><marquee>ABOUT US</marquee></h2>
-      <h3>* At Beauty Bronze, we believe every strand tells a story...<br><br>
-        <b>Glow naturally. Shine confidently. With Beauty Bronze.</b>
-      </h3>
+  
+    <div id="orderForm" class="order-window">
+        <h3>Place Order</h3>
+        <input id="orderName" type="text" placeholder="Your Name">
+        <input id="orderPhone" type="text" placeholder="Phone Number">
+        <textarea id="orderAddress" placeholder="Address"></textarea>
+        <input id="orderProduct" type="text" readonly>
+        <button onclick="submitOrder()">Confirm Order</button>
     </div>
-  </div>
 
-  <style>
-    .product-card {
-      perspective: 1000px;
-      transition: transform 0.4s;
-    }
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Beauty Bronze Professional | All Rights Reserved</p>
+    </footer>
 
-    .product-card:hover {
-      transform: rotateY(10deg) rotateX(5deg) scale(1.05);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
-    }
-  </style>
-
-  <!-- PRODUCTS -->
-  <section id="products">
-    <h2>Our Products</h2>
-
-    <div class="product-grid">
-
-      <!-- Product 1 -->
-      <div class="product-card">
-        <img src="WhatsApp Image 2025-05-14 at 2.39.15 PM.jpeg" alt="Shampoo" />
-        <details>
-          <summary><h3>Banana Hair Mask Hydra, Keratin</h3></summary>
-          <p>Nourish your hair with the richness of banana extract blended with strengthening keratin.
-This mask deeply hydrates dry, frizzy strands while repairing damage from heat and styling.
-Its creamy texture smooths cuticles, reduces breakage, and boosts natural shine.
-Perfect for restoring softness, elasticity, and salon-like smoothness at home.</p>
-        </details>
-
-        <!-- ORDER BUTTON ADDED -->
-        <button class="order-btn" onclick="openOrderForm('Banana Hair Mask')">Order Now</button>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="product-card">
-        <img src="WhatsApp Image 2025-05-14 at 3.18.01 PM.jpeg" alt="Hair Mask" />
-        <details>
-          <summary><h3>BOTOX HAIR MASK</h3></summary>
-          <p>
-
-Deep Repair and Strengthening: Replenishes damaged hair with essential nutrients like keratin, vitamins, and proteins, restoring strength and elasticity
-
-Frizz Reduction and Smoothness: Smooths the hair cuticle, taming frizz and providing a sleek, shiny finish for easier manageability.
-
-Hydration and Volume Boost: Deeply hydrates dry strands while adding volume and body, leaving hair feeling soft and full of life</p>
-        </details>
-
-        <button class="order-btn" onclick="openOrderForm('Botox Hair Mask')">Order Now</button>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="product-card">
-        <img src="WhatsApp Image 2025-05-14 at 3.17.49 PM.jpeg" alt="Hair Mask" />
-        <details>
-          <summary><h3>NANOPLEX HAIR MASK</h3></summary>
-          <p>
-
-Intense Hair Restoration: Revitalizes damaged, brittle hair by filling in gaps in the hair shaft, repairing split ends, and reversing the effects of chemical treatments and heat styling
-
-Enhanced Shine and Smooth Texture: Smooths the hair cuticle for a mirrar like shine and silky feel, making hair look healthier and more vibrant.
-
-Boosts Hair Volume and Density: Adds body and thickness to thinning or limp hair, making it appear fuller and more voluminous without weighing it down.
-
-Protects Against Future Damage:
-
-Strengthens hair strands by fortifying them with keratin and proteins, reducing the risk of breakage and damage from daily styling</p>
-        </details>
-
-        <button class="order-btn" onclick="openOrderForm('Nanoplex Hair Mask')">Order Now</button>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card">
-        <img src="WhatsApp Image 2025-05-14 at 3.35.54 PM.jpeg" alt="HAIR TREATMENT" />
-        <details>
-          <summary><h3>NANOPLEX HAIR TREATMENT</h3></summary>
-          <p>
-Nanoplex hair treatment is a revolutionary procedure that aims to repair damage hair, reduce frizz and enhance the overall appearance and texture of the locks, it utilises advanced nano technology protein ingredients to deliver transformative results.
-
-Benefits of Nanoplex: Nanoplex is a nutrient based system that will repair damage hair with a hair fiber coating filled with vitamins and nutrients, this will create silky, shiny and frizz free hair-similar to the botox system.
-
-Importance of Nanoplex Nanoplex treatment tames frizz, leaving the hair smoother, more manageable and easier to style. Intense hydration, dry and dehydrated hair can lead to breakage and dullness. Nanoplex treatment infuses moisture into the hair, providing deep hydration and restoring its natural luster</p>
-        </details>
-
-        <button class="order-btn" onclick="openOrderForm('Nanoplex Hair Treatment')">Order Now</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- MORE PRODUCTS -->
-  <section id="products">
-
-    <div class="product-grid">
-
-      <div class="product-card">
-        <img src="WhatsApp Image 2025-05-26 at 4.30.15 PM.jpeg" alt="HAIR TREATMENT" />
-        <details>
-          <summary><h3>BOTOX HAIR TREATMENT</h3></summary>
-          <p>Botox is a deep conditioning treatment that coats hair fibers with a filler such as keratin, the treatment fills in any broken or thin areas on each hair strand to make hair appear more full and lustrous.
-
-Benefits of Botoc: Hair Botox is deeply nourishing, hydrating and can leave your hair looking snoother, shiner and fuller. The collagen and keratin that coats hair strands during a hair botox treatment can fill in damaged parts of the hair cuticles, leading to the smoother, shinier look.
-
-Importance of Botox: Botox for hair adds volume to your hair and gives it a smoother, shinier finish upto 40% straight look. It helps to eliminate the dryness and split ends that cause frizz.</p>
-        </details>
-
-        <button class="order-btn" onclick="openOrderForm('Botox Hair Treatment')">Order Now</button>
-      </div>
-
-      <div class="product-card">
-        <img src="ww.jpeg" alt="shampoo&conditioner" />
-        <details>
-          <summary><h3>BOTOX SHAMPOO & CONDITIONER</h3></summary>
-          <p>
-
-
-
-Botox shampoo cleansers the sodip and hair by removing dirt, excess oil and product buildup promoting hygiene and scalp hedim nourishes and hydrates hair strands, improving texture shine and manageabilly Regular use helps maintain a fresh healthy appearance while addressing specifichat concerns like anndruff or dryness.
-
-Botox hair conditioner moisturizes and detangles hair, making it smoother and easier to manage a helps reduce frizz, odds shine, and protects hair from damage caused by styling or environmental factors Regular use promotes healthier, softer, and more resilient hair</p>
-        </details>
-
-        <button class="order-btn" onclick="openOrderForm('Botox Shampoo & Conditioner')">Order Now</button>
-      </div>
-
-      <div class="product-card">
-        <img src="WhatsApp Image 2025-05-26 at 4.50.08 PM.jpeg" alt="Shampoo Conditioner" />
-        <details>
-          <summary><h3>NANOPLEX SHAMPOO & CONDITIONER</h3></summary>
-          <p>Nanplex shampoo: cleanses the scalp and hair by removing dirt, excess
-
-all and product buildup, promoting hygiene and scalp health. It nourishes and hydrates hair strands, improving texture, shine, and manageability. Regular use helps maintain a fresh, healthy appearance while addressing specific hair concerns like dandruff or dryness.
-
-Nanoplex hair conditioner helps to moisturize and hydrate the hair, making it softer and more manageable it also reduces frizz and detangles hair, preventing breakage Regular use can improve hair strength, shine, and overall health</p>
-        </details>
-
-        <button class="order-btn" onclick="openOrderForm('Nanoplex Shampoo & Conditioner')">Order Now</button>
-      </div>
-
-      <div class="product-card">
-        <img src="WhatsApp Image 2025-05-26 at 4.50.07 PM.jpeg" alt="KERATIN" />
-        <details>
-          <summary><h3>KERATIN HAIR SERUM</h3></summary>
-          <p>Strengthens Hair. Keratin is a protein naturally found in hair, and a keratin serum helps replenish and strengthen the hair shaft reducing breakage and split ends
-
-Reduces Frizz. The smoothing properties of keratin help seal the hair cuticle, reducing frizz and flyaways, even in humid conditions.
-
-Enhances Shine: Keratin serums create a smooth, reflective surface on the hair, resulting in a glossy, shiny appearance.
-
-Protects Against Damage: Many keratin serums
-
-contain heat-protectant properties, shielding hair from the damaging effects of styling tools like flat irons, curling wands, and blow dryers</p>
-        </details>
-
-        <button class="order-btn" onclick="openOrderForm('Keratin Hair Serum')">Order Now</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email">
-
-      <label for="message">Message:</label>
-      <textarea id="message"></textarea>
-
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <!-- CHAT BUTTON ADDED -->
-  <div class="chat-btn" onclick="toggleChat()">💬 Chat</div>
-
-  <!-- CHAT WINDOW -->
-  <div id="chatWindow" class="chat-window">
-  <h3>Chat With Us</h3>
-
-  <div id="chatMessages" class="chat-messages"></div>
-
-  <input id="chatName" type="text" placeholder="Your Name">
-  <textarea id="chatMessage" placeholder="Your Message"></textarea>
-
-  <button onclick="sendMessage()">Send</button>
-</div>
-  <!-- ORDER POPUP -->
-  <div  id="orderForm" class="order-window">
-    <h3>Place Order</h3>
-    <input id="orderName" type="text" placeholder="Your Name">
-    <input id="orderPhone" type="text" placeholder="Phone Number">
-    <textarea id="orderAddress" placeholder="Address"></textarea>
-    <input id="orderProduct" type="text" readonly>
-    <button onclick="submitOrder()">Confirm Order</button>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Beauty Bronze. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
