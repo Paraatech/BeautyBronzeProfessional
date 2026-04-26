@@ -1,155 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Bronze Professional</title>
+<section class="products" id="products">
+    <h2>Our Products</h2>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <div class="product-grid">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- HEADER -->
-    <header>
-        <div class="logo">Beauty Bronze ✨</div>
-
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Glow Naturally, Shine Confidently</h1>
-            <p>Premium Haircare & Beauty Products for salon-like results at home.</p>
-            <a href="#products" class="hero-btn">Shop Now</a>
+        <div class="product-card">
+            <img src="WhatsApp Image 2025-05-14 at 2.39.15 PM.jpeg" alt="Banana Hair Mask">
+            <h3>Banana Hair Mask</h3>
+            <p>Hydrates dry, frizzy hair while repairing damage and boosting shine.</p>
+            <button class="order-btn" onclick="openOrderForm('Banana Hair Mask')">Order Now</button>
         </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
-        <h2>About Us</h2>
-        <p>
-            At Beauty Bronze, we believe every strand tells a story. 
-            Our premium haircare products are designed to nourish, repair and transform your hair.
-        </p>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section class="products" id="products">
-        <h2>Our Products</h2>
-
-        <div class="product-grid">
-
-            <!-- PRODUCT CARD -->
-            <div class="product-card">
-                <img src="WhatsApp Image 2025-05-14 at 2.39.15 PM.jpeg" alt="Banana Hair Mask">
-                <h3>Banana Hair Mask</h3>
-                <p>Hydrates dry, frizzy hair while repairing damage and boosting shine.</p>
-                <button class="order-btn" onclick="openOrderForm('Banana Hair Mask')">Order Now</button>
-            </div>
-
-            <div class="product-card">
-                <img src="WhatsApp Image 2025-05-14 at 3.18.01 PM.jpeg" alt="Botox Hair Mask">
-                <h3>Botox Hair Mask</h3>
-                <p>Deep repair, hydration, frizz control and silky smooth finish.</p>
-                <button class="order-btn" onclick="openOrderForm('Botox Hair Mask')">Order Now</button>
-            </div>
-
-            <div class="product-card">
-                <img src="WhatsApp Image 2025-05-14 at 3.17.49 PM.jpeg" alt="Nanoplex Hair Mask">
-                <h3>Nanoplex Hair Mask</h3>
-                <p>Intense restoration, shine enhancement and stronger hair strands.</p>
-                <button class="order-btn" onclick="openOrderForm('Nanoplex Hair Mask')">Order Now</button>
-            </div>
-
-            <div class="product-card">
-                <img src="WhatsApp Image 2025-05-14 at 3.35.54 PM.jpeg" alt="Nanoplex Treatment">
-                <h3>Nanoplex Treatment</h3>
-                <p>Advanced nano technology treatment for silky, shiny hair.</p>
-                <button class="order-btn" onclick="openOrderForm('Nanoplex Treatment')">Order Now</button>
-            </div>
-
+        <div class="product-card">
+            <img src="WhatsApp Image 2025-05-14 at 3.18.01 PM.jpeg" alt="Botox Hair Mask">
+            <h3>Botox Hair Mask</h3>
+            <p>Deep repair, hydration, frizz control and silky smooth finish.</p>
+            <button class="order-btn" onclick="openOrderForm('Botox Hair Mask')">Order Now</button>
         </div>
-<div class="product-card">
-    <img src="WhatsApp Image 2025-05-26 at 4.30.15 PM.jpeg" alt="Botox Hair Treatment">
-    <h3>Botox Hair Treatment</h3>
-    <p>Deep conditioning treatment for smooth, shiny and frizz-free hair.</p>
-    <button class="order-btn" onclick="openOrderForm('Botox Hair Treatment')">Order Now</button>
-</div>
 
-<div class="product-card">
-    <img src="ww.jpeg" alt="Botox Shampoo & Conditioner">
-    <h3>Botox Shampoo & Conditioner</h3>
-    <p>Nourishes scalp, reduces frizz and improves manageability.</p>
-    <button class="order-btn" onclick="openOrderForm('Botox Shampoo & Conditioner')">Order Now</button>
-</div>
+        <div class="product-card">
+            <img src="WhatsApp Image 2025-05-14 at 3.17.49 PM.jpeg" alt="Nanoplex Hair Mask">
+            <h3>Nanoplex Hair Mask</h3>
+            <p>Intense restoration, shine enhancement and stronger hair strands.</p>
+            <button class="order-btn" onclick="openOrderForm('Nanoplex Hair Mask')">Order Now</button>
+        </div>
 
-<div class="product-card">
-    <img src="WhatsApp Image 2025-05-26 at 4.50.08 PM.jpeg" alt="Nanoplex Shampoo & Conditioner">
-    <h3>Nanoplex Shampoo & Conditioner</h3>
-    <p>Hydrates hair and improves softness, shine and strength.</p>
-    <button class="order-btn" onclick="openOrderForm('Nanoplex Shampoo & Conditioner')">Order Now</button>
-</div>
+        <div class="product-card">
+            <img src="WhatsApp Image 2025-05-14 at 3.35.54 PM.jpeg" alt="Nanoplex Treatment">
+            <h3>Nanoplex Treatment</h3>
+            <p>Advanced nano technology treatment for silky, shiny hair.</p>
+            <button class="order-btn" onclick="openOrderForm('Nanoplex Treatment')">Order Now</button>
+        </div>
 
-<div class="product-card">
-    <img src="WhatsApp Image 2025-05-26 at 4.50.07 PM.jpeg" alt="Keratin Hair Serum">
-    <h3>Keratin Hair Serum</h3>
-    <p>Reduces frizz, adds shine and protects hair from heat damage.</p>
-    <button class="order-btn" onclick="openOrderForm('Keratin Hair Serum')">Order Now</button>
-</div>
-        
-    </section>
+        <div class="product-card">
+            <img src="WhatsApp Image 2025-05-26 at 4.30.15 PM.jpeg" alt="Botox Hair Treatment">
+            <h3>Botox Hair Treatment</h3>
+            <p>Deep conditioning treatment for smooth, shiny and frizz-free hair.</p>
+            <button class="order-btn" onclick="openOrderForm('Botox Hair Treatment')">Order Now</button>
+        </div>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-        <h2>Contact Us</h2>
+        <div class="product-card">
+            <img src="ww.jpeg" alt="Botox Shampoo & Conditioner">
+            <h3>Botox Shampoo & Conditioner</h3>
+            <p>Nourishes scalp, reduces frizz and improves manageability.</p>
+            <button class="order-btn" onclick="openOrderForm('Botox Shampoo & Conditioner')">Order Now</button>
+        </div>
 
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name">
-            <input type="email" id="email" placeholder="Your Email">
-            <textarea id="message" placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <div class="product-card">
+            <img src="WhatsApp Image 2025-05-26 at 4.50.08 PM.jpeg" alt="Nanoplex Shampoo & Conditioner">
+            <h3>Nanoplex Shampoo & Conditioner</h3>
+            <p>Hydrates hair and improves softness, shine and strength.</p>
+            <button class="order-btn" onclick="openOrderForm('Nanoplex Shampoo & Conditioner')">Order Now</button>
+        </div>
 
-    <!-- CHAT BUTTON -->
-    <div class="chat-btn" onclick="toggleChat()">💬 Chat</div>
+        <div class="product-card">
+            <img src="WhatsApp Image 2025-05-26 at 4.50.07 PM.jpeg" alt="Keratin Hair Serum">
+            <h3>Keratin Hair Serum</h3>
+            <p>Reduces frizz, adds shine and protects hair from heat damage.</p>
+            <button class="order-btn" onclick="openOrderForm('Keratin Hair Serum')">Order Now</button>
+        </div>
 
-    <!-- CHAT WINDOW -->
-    <div id="chatWindow" class="chat-window">
-        <h3>Chat With Us</h3>
-        <div id="chatMessages" class="chat-messages"></div>
-        <input id="chatName" type="text" placeholder="Your Name">
-        <textarea id="chatMessage" placeholder="Your Message"></textarea>
-        <button onclick="sendMessage()">Send</button>
     </div>
-
-  
-    <div id="orderForm" class="order-window">
-        <h3>Place Order</h3>
-        <input id="orderName" type="text" placeholder="Your Name">
-        <input id="orderPhone" type="text" placeholder="Phone Number">
-        <textarea id="orderAddress" placeholder="Address"></textarea>
-        <input id="orderProduct" type="text" readonly>
-        <button onclick="submitOrder()">Confirm Order</button>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Beauty Bronze Professional | All Rights Reserved</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+</section>
