@@ -1,5 +1,5 @@
-const BACKEND_URL = "http://localhost:5000";
 
+const BACKEND_URL = "https://beautybronze-backend.onrender.com";
 /* ---------------- CONTACT FORM ---------------- */
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
