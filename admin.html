@@ -50,32 +50,26 @@ color:white;
 </table>
 
 <script>
-  
-
 fetch("https://beautybronze-backend.onrender.com/api/orders")
-.then(res=>res.json())
-.then(data=>{
-let table="";
-data.forEach(order=>{
-table += `
-<tr>
-<td>${order.name}</td>
-<td>${order.phone}</td>
-<td>${order.product}</td>
-<td>${order.address}</td>
-<td>${new Date(order.time).toLocaleString()}</td>
-<td><button onclick="deleteOrder('${order._id}')">Delete</button></td>
-</tr>
-`;
-document.getElementById("ordersTable").innerHTML=table;
+.then(res => res.json())
+.then(data => {
+    let table = "";
+    data.forEach(order => {
+        table += `
+        <tr>
+            <td>${order.name}</td>
+            <td>${order.phone}</td>
+            <td>${order.product}</td>
+            <td>${order.address}</td>
+            <td>${new Date(order.time).toLocaleString()}</td>
+            <td><button onclick="deleteOrder('${order._id}')">Delete</button></td>
+        </tr>
+        `;
+    });
+    document.getElementById("ordersTable").innerHTML = table;
 });
-  
-let pass = prompt("Enter Password");
-if(pass !== "Sham123"){
-    alert("Wrong Password");
-    window.location.href = "index.html";
-}
-  function deleteOrder(id){
+
+function deleteOrder(id){
     fetch(`https://beautybronze-backend.onrender.com/api/orders/${id}`,{
         method:"DELETE"
     })
@@ -85,6 +79,6 @@ if(pass !== "Sham123"){
         location.reload();
     });
 }
-  </script>
+</script>
 </body>
 </html>
