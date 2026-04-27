@@ -63,9 +63,9 @@ table += `
 <td>${order.product}</td>
 <td>${order.address}</td>
 <td>${new Date(order.time).toLocaleString()}</td>
+<td><button onclick="deleteOrder('${order._id}')">Delete</button></td>
 </tr>
 `;
-});
 document.getElementById("ordersTable").innerHTML=table;
 });
   
