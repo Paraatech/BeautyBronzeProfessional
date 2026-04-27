@@ -38,11 +38,12 @@ color:white;
 <table>
 <thead>
 <tr>
-<th>Name</th>
-<th>Phone</th>
-<th>Product</th>
-<th>Address</th>
-<th>Time</th>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Product</th>
+    <th>Address</th>
+    <th>Time</th>
+    <th>Action</th>
 </tr>
 </thead>
 <tbody id="ordersTable"></tbody>
@@ -73,6 +74,16 @@ let pass = prompt("Enter Password");
 if(pass !== "Sham123"){
     alert("Wrong Password");
     window.location.href = "index.html";
+}
+  function deleteOrder(id){
+    fetch(`https://beautybronze-backend.onrender.com/api/orders/${id}`,{
+        method:"DELETE"
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        alert("Deleted Successfully");
+        location.reload();
+    });
 }
   </script>
 </body>
