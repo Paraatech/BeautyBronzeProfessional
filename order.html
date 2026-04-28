@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Order Now | Beauty Bronze</title>
+
 <style>
 *{
 margin:0;
@@ -94,9 +95,9 @@ margin-top:40px;
 <div class="container">
 <h1>Place Your Order</h1>
 
-<input type="text" id="name" placeholder="Enter Name">
-<input type="text" id="phone" placeholder="Enter Phone">
-<textarea id="address" placeholder="Enter Address"></textarea>
+<input type="text" id="name" placeholder="Enter Name" required>
+<input type="text" id="phone" placeholder="Enter Phone" required>
+<textarea id="address" placeholder="Enter Address" required></textarea>
 
 <select id="product">
 <option>Banana Hair Mask</option>
@@ -114,12 +115,18 @@ margin-top:40px;
 
 <script>
 function submitOrder(){
+
 const orderData = {
 name: document.getElementById("name").value,
 phone: document.getElementById("phone").value,
 address: document.getElementById("address").value,
 product: document.getElementById("product").value
 };
+
+if(!orderData.name || !orderData.phone || !orderData.address){
+alert("Please fill all details");
+return;
+}
 
 fetch("https://beautybronze-backend.onrender.com/api/order",{
 method:"POST",
@@ -131,10 +138,16 @@ body:JSON.stringify(orderData)
 .then(res=>res.json())
 .then(data=>{
 alert("Order Placed Successfully ✅");
+
 document.getElementById("name").value="";
 document.getElementById("phone").value="";
 document.getElementById("address").value="";
+})
+.catch(error=>{
+alert("Error placing order ❌");
+console.log(error);
 });
+
 }
 </script>
 
