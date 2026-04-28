@@ -1,147 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beauty Bronze Professional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Bronze Professional</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8f8f8;
+color:#222;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#111;
+position:sticky;
+top:0;
+z-index:1000;
+animation:slideDown 1s ease;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#d4af37;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:18px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#d4af37;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1400&q=80') center/cover;
+color:white;
+animation:fadeIn 2s ease;
+}
+
+.hero-content h1{
+font-size:60px;
+margin-bottom:20px;
+animation:up 1s ease;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:25px;
+animation:up 1.5s ease;
+}
+
+.btn{
+display:inline-block;
+padding:12px 28px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+font-size:18px;
+border-radius:30px;
+transition:.3s;
+animation:up 2s ease;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:white;
+}
+
+section{
+padding:70px 8%;
+}
+
+.heading{
+text-align:center;
+font-size:38px;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+animation:fadeIn 1.5s ease;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+text-align:center;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes up{
+from{transform:translateY(40px);opacity:0;}
+to{transform:translateY(0);opacity:1;}
+}
+
+@keyframes slideDown{
+from{transform:translateY(-100%);}
+to{transform:translateY(0);}
+}
+
+@media(max-width:768px){
+.hero-content h1{
+font-size:40px;
+}
+.hero-content p{
+font-size:18px;
+}
+nav{
+flex-direction:column;
+}
+nav ul{
+margin-top:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+}
+</style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">Beauty Bronze Professionals✨</div>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<nav>
+<div class="logo">Beauty Bronze</div>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="order.html">Order</a></li>
+<li><a href="admin.html">Admin</a></li>
+</ul>
+</nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Glow Naturally, Shine Confidently</h1>
-    <p>Premium Haircare Products for Healthy & Beautiful Hair</p>
-    <a href="#products" class="hero-btn">Shop Now</a>
-  </div>
+<section class="hero">
+<div class="hero-content">
+<h1>Glow With Confidence</h1>
+<p>Premium Hair Care & Beauty Solutions</p>
+<a href="shop.html" class="btn">Shop Now</a>
+</div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <h2>About Us</h2>
-  <p>
-    At Beauty Bronze Professional, we provide premium salon-quality products
-    designed to nourish, repair, and transform your hair beautifully.
-  </p>
-</section>
-
-<!-- PRODUCTS -->
-<section class="products" id="products">
-  <h2>Our Products</h2>
-
-  <div class="product-grid">
-
-    <div class="product-card">
-      <img src="WhatsApp Image 2025-05-14 at 2.39.15 PM.jpeg">
-      <h3>Banana Hair Mask</h3>
-      <p>Hydrates dry hair while repairing damage.</p>
-      <button class="order-btn" onclick="openOrderForm('Banana Hair Mask')">Order Now</button>
-    </div>
-
-    <div class="product-card">
-      <img src="WhatsApp Image 2025-05-14 at 3.18.01 PM.jpeg">
-      <h3>Botox Hair Mask</h3>
-      <p>Deep repair and frizz control treatment.</p>
-      <button class="order-btn" onclick="openOrderForm('Botox Hair Mask')">Order Now</button>
-    </div>
-
-    <div class="product-card">
-      <img src="WhatsApp Image 2025-05-14 at 3.17.49 PM.jpeg">
-      <h3>Nanoplex Hair Mask</h3>
-      <p>Restores shine and strengthens strands.</p>
-      <button class="order-btn" onclick="openOrderForm('Nanoplex Hair Mask')">Order Now</button>
-    </div>
-
-    <div class="product-card">
-      <img src="WhatsApp Image 2025-05-14 at 3.35.54 PM.jpeg">
-      <h3>Nanoplex Hair Treatment</h3>
-      <p>Silky smooth advanced nano treatment.</p>
-      <button class="order-btn" onclick="openOrderForm('Nanoplex Hair Treatment')">Order Now</button>
-    </div>
-
-    <div class="product-card">
-      <img src="WhatsApp Image 2025-05-26 at 4.30.15 PM.jpeg">
-      <h3>Botox Hair Treatment</h3>
-      <p>Conditioning treatment for smooth hair.</p>
-      <button class="order-btn" onclick="openOrderForm('Botox Hair Treatment')">Order Now</button>
-    </div>
-
-    <div class="product-card">
-      <img src="ww.jpeg">
-      <h3>Botox Shampoo & Conditioner</h3>
-      <p>Nourishes scalp and reduces frizz.</p>
-      <button class="order-btn" onclick="openOrderForm('Botox Shampoo & Conditioner')">Order Now</button>
-    </div>
-
-    <div class="product-card">
-      <img src="WhatsApp Image 2025-05-26 at 4.50.08 PM.jpeg">
-      <h3>Nanoplex Shampoo & Conditioner</h3>
-      <p>Improves softness, shine and strength.</p>
-      <button class="order-btn" onclick="openOrderForm('Nanoplex Shampoo & Conditioner')">Order Now</button>
-    </div>
-
-    <div class="product-card">
-      <img src="WhatsApp Image 2025-05-26 at 4.50.07 PM.jpeg">
-      <h3>Keratin Hair Serum</h3>
-      <p>Protects hair from heat and frizz.</p>
-      <button class="order-btn" onclick="openOrderForm('Keratin Hair Serum')">Order Now</button>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name">
-    <input type="email" id="email" placeholder="Your Email">
-    <textarea id="message" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<!-- CHAT -->
-<div class="chat-btn" onclick="toggleChat()">💬 Chat</div>
-
-<div id="chatWindow" class="chat-window">
-  <h3>Chat With Us</h3>
-  <div id="chatMessages" class="chat-messages"></div>
-  <input id="chatName" type="text" placeholder="Your Name">
-  <textarea id="chatMessage" placeholder="Your Message"></textarea>
-  <button onclick="sendMessage()">Send</button>
+<section>
+<h2 class="heading">Featured Products</h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Banana Hair Mask</h3>
+<p>Healthy and shiny hair treatment.</p>
+</div>
 </div>
 
-<!-- ORDER FORM -->
-<div id="orderForm" class="order-window">
-  <h3>Place Order</h3>
-  <input id="orderName" type="text" placeholder="Your Name">
-  <input id="orderPhone" type="text" placeholder="Phone Number">
-  <textarea id="orderAddress" placeholder="Address"></textarea>
-  <input id="orderProduct" type="text" readonly>
-  <button onclick="submitOrder()">Confirm Order</button>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Botox Hair Treatment</h3>
+<p>Smooth and silky hair instantly.</p>
+</div>
 </div>
 
-<!-- FOOTER -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&w=800&q=80">
+<div class="card-content">
+<h3>Keratin Care</h3>
+<p>Professional salon-quality treatment.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff;">
+<h2 class="heading">Our Services</h2>
+<div class="cards">
+<div class="card">
+<div class="card-content">
+<i class="fa-solid fa-spa fa-3x" style="color:#d4af37;"></i>
+<h3>Hair Spa</h3>
+<p>Relaxing spa for healthy hair.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<i class="fa-solid fa-scissors fa-3x" style="color:#d4af37;"></i>
+<h3>Hair Styling</h3>
+<p>Modern trendy hairstyles.</p>
+</div>
+</div>
+
+<div class="card">
+<div class="card-content">
+<i class="fa-solid fa-wand-magic-sparkles fa-3x" style="color:#d4af37;"></i>
+<h3>Beauty Care</h3>
+<p>Glow enhancing treatments.</p>
+</div>
+</div>
+</div>
+</section>
+
 <footer>
-  <p>© 2025 Beauty Bronze Professional | All Rights Reserved</p>
+<p>© 2026 Beauty Bronze Professional | Developed by Paras Wadhwa</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
